@@ -9,12 +9,13 @@
 * { box-sizing:border-box; }
 html,body { min-height:100%; margin:0; }
 body { color:var(--text); font:15px/1.5 "Segoe UI",system-ui,sans-serif; background:radial-gradient(ellipse at 50% -15%,#194c91 0,transparent 48%),linear-gradient(150deg,#080d18,#0c1422 65%,#101a2b); }
-#brand { display:flex; align-items:center; justify-content:center; gap:12px; padding:22px 16px; border-bottom:1px solid #ffffff18; background:#050a13aa; }
+body::before { content:""; position:fixed; inset:0; z-index:0; pointer-events:none; background:url("Refurbished67.png") center center / auto 72vh no-repeat; opacity:.075; }
+#brand { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:12px; padding:22px 16px; border-bottom:1px solid #ffffff18; background:#050a13aa; }
 #brand .mark { display:grid; place-items:center; width:38px; height:38px; border:1px solid #54d5ff88; border-radius:11px; color:#fff; background:linear-gradient(145deg,#3989ff,#1650a3); box-shadow:0 0 22px #168bff55; font-size:20px; font-weight:800; }
 #brand b { color:#f5f9ff; font-size:15px; letter-spacing:.2em; font-weight:750; }
-#warn { max-width:920px; margin:22px auto 0; padding:12px 16px; border:1px solid #f6ba5355; border-radius:10px; background:#593a102b; color:#f1d39a; text-align:center; font-size:12px; font-weight:700; letter-spacing:.04em; line-height:1.65; }
+#warn { position:relative; z-index:1; max-width:920px; margin:22px auto 0; padding:12px 16px; border:1px solid #f6ba5355; border-radius:10px; background:#593a102b; color:#f1d39a; text-align:center; font-size:12px; font-weight:700; letter-spacing:.04em; line-height:1.65; }
 #warn b { color:#fff0c8; }
-#wrap { width:min(560px,calc(100% - 32px)); margin:44px auto 90px; padding:30px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(145deg,#142642f2,#101b2eee); box-shadow:0 24px 70px #0008,inset 0 1px #ffffff0d; }
+#wrap { position:relative; z-index:1; width:min(560px,calc(100% - 32px)); margin:44px auto 90px; padding:30px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(145deg,#142642f2,#101b2eee); box-shadow:0 24px 70px #0008,inset 0 1px #ffffff0d; }
 #eyebrow { margin:0 0 17px; color:var(--cyan); font-size:11px; font-weight:750; letter-spacing:.18em; text-transform:uppercase; }
 #state { margin:0 0 8px; font-size:clamp(21px,5vw,28px); line-height:1.25; font-weight:700; }
 #det { min-height:22px; color:var(--muted); font-size:13px; }
@@ -24,13 +25,14 @@ body { color:var(--text); font:15px/1.5 "Segoe UI",system-ui,sans-serif; backgro
 #foot { position:fixed; z-index:2; left:0; right:0; bottom:0; padding:14px 12px; border-top:1px solid #ffffff18; background:#050a13e8; text-align:center; color:#8294ad; font-size:11px; letter-spacing:.1em; }
 #foot b { color:#dceaff; font-weight:700; }
 @media(max-width:600px) { #brand { padding:17px 12px; } #warn { margin:15px 12px 0; padding:11px 12px; font-size:11px; } #wrap { margin-top:28px; padding:24px 20px; } }
-</style></style>
+</style>
 </head>
 <body>
-<div id="brand"><span class="mark" aria-hidden="true">R</span><b>REFURBISHED</b></div></div>
-<div id="warn">GOLDHEN DISPONÍVEL PARA OS FIRMWARES <b>11.00, 11.50, 12.00, 12.50, 13.00, 13.02, 13.04, 13.50 E 13.52</b></div></div>
+<div id="brand"><span class="mark" aria-hidden="true">R</span><b>REFURBISHED</b></div>
+<div id="warn">GOLDHEN DISPONÍVEL PARA OS FIRMWARES <b>11.00, 11.50, 12.00, 12.50, 13.00, 13.02, 13.04, 13.50 E 13.52</b></div>
 <div id="wrap">
-  <p id="eyebrow">PlayStation 4 &nbsp;·&nbsp; Central do sistema</p>\n  <div id="state">Detectando firmware...</div>
+  <p id="eyebrow">PlayStation 4 &nbsp;·&nbsp; Central do sistema</p>
+  <div id="state">Detectando firmware...</div>
   <div id="det"></div>
   <div id="cache"></div>
 </div>
@@ -135,6 +137,6 @@ body { color:var(--text); font:15px/1.5 "Segoe UI",system-ui,sans-serif; backgro
     }
 })();
 </script>
-<div id="foot"><b>REFURBISHED</b> &nbsp;·&nbsp; PS4 SYSTEM</div></div>
+<div id="foot"><b>REFURBISHED</b> &nbsp;·&nbsp; PS4 SYSTEM</div>
 </body>
 </html>
